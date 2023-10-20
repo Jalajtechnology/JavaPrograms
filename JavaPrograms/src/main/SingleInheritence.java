@@ -18,17 +18,24 @@ class Child extends Parent
 	int b;
 	Child()
 	{
-		
 		this(100,200);
+		
+		
+		
+		
+		
 		
 	}
 	Child(int a,int b)
 	{
+		 
+		
 		
 		this.a=a;
 		this.b=b;
 		
 	}
+	
 	void show()
 	{
 		System.out.println(a);
