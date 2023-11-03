@@ -37,7 +37,7 @@ class Rectangle extends Shapes
 class Geometry
 {
 	
-	void permit(Shapes s)
+	void permit(Shapes s)// Runtime polymorphism
 	{
 		System.out.println("called");
 		s.input();
