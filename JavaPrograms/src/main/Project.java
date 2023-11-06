@@ -3,13 +3,16 @@ package main;
 import java.util.Scanner;
 import java.lang.String;
 
-abstract class Shapes
+  abstract class Shapes
 {
 	float area;
 	//Abstraction
-	abstract void input();
+	 abstract void input();
+	 
 	abstract void compute();
+	 
 	abstract void display();
+	
 }
 class Rectangle extends Shapes
 {
@@ -34,7 +37,7 @@ class Rectangle extends Shapes
 	}
 	
 }
-class Geometry
+ class Geometry  
 {
 	
 	void permit(Shapes s)// Runtime polymorphism
