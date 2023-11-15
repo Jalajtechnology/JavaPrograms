@@ -1,23 +1,15 @@
 package OneOneAssociation;
-import java.lang.String;
-// dependent class
 
 public class Account {
-	String accno;
-	String accname;
-	String acctype;
-	public Account(String accno, String accname, String acctype) {
+	String accountno;
+	String accountname;
+	String accounttype;
+	public Account(String accountno, String accountname, String accounttype) {
 		super();
-		this.accno = accno;
-		this.accname = accname;
-		this.acctype = acctype;
+		this.accountno = accountno;
+		this.accountname = accountname;
+		this.accounttype = accounttype;
 	}
-	
-	
-	
-	
-	
-
 	
 
 }
