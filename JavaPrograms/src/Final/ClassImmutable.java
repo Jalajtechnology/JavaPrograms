@@ -33,7 +33,7 @@ public class ClassImmutable {
 		Test t2=t1.modify(10);
 		System.out.println(t1==t2);
 		
-		Test t3=t1.modify(100);
+		Test t3=t1.modify(100); 
 
 	}
 
