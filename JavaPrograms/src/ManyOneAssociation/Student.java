@@ -23,7 +23,7 @@ public class Student {
 	}
 	public Branch getStudentBranch()
 	{
-		return b1;
+		return b1; 
 	}
 	
 	
