@@ -6,6 +6,7 @@ interface Ix //interface
 }
 abstract class AdaptX implements Ix//abstract class 
 {
+	
 
 	public void m1()
 	{
@@ -21,6 +22,8 @@ class TestApp extends AdaptX
 	public void m1()
 	{
 		System.out.println("implementing m1");
+		
+		
 	}
 }
 

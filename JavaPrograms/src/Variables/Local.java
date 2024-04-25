@@ -13,8 +13,8 @@ public class Local {
 	}
 	public void display(int y)
 	{
-		System.out.println(y);
-		System.out.println(this.y);
+		System.out.println(y);//local variable
+		System.out.println(this.y);//instance variable;
 	}
 
 }
