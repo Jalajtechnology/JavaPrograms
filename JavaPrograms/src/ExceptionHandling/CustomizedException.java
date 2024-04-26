@@ -2,6 +2,10 @@ package ExceptionHandling;
 
 import java.util.Scanner;
 
+class InvalidInput extends Exception
+{
+	
+}
 class ATM
 {
 	int userid=123;
@@ -12,15 +16,19 @@ class ATM
 		System.out.println("Enter user id");
 		 userid1=sc.nextInt();
 	}
-	public void verify()
+	public void verify() throws InvalidInput
 	{
-		if(userid !=userid1)
+		if(userid ==userid1)
 		{
-			System.out.println("Please enter the correct user id enter user id is correct");
+			System.out.println("User verified successfully");
 		}
 		else
 		{
-			System.out.println("Please verify successfully") ;
+			// Throwing already handled exception ;
+			System.out.println("You have entered Wrong input Please enter correct input");
+			InvalidInput i= new InvalidInput();
+			System.out.println(i);
+			throw i;
 		}
 	}
 }
@@ -30,7 +38,31 @@ class Bank
 	{
 		ATM h= new ATM();
 		h.enterDetails();
-		h.verify();
+		try {
+			h.verify();
+		} catch (InvalidInput e) {
+			// TODO Auto-generated catch block
+			try
+			{
+				h.enterDetails();
+				h.verify();
+			}
+			catch(InvalidInput f)
+			{
+				try
+				{
+					h.enterDetails();
+					h.verify();
+				}
+				catch(InvalidInput s)
+				{
+					System.out.println("Atm blocked due to wrong input multiple times");
+					System.exit(0);
+				}
+				
+			}
+			
+		}
 	}
 }
 
